@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.passportdatageneration.fragment.MenuFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_menuuFragment"
+            app:destination="@id/menuuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuuFragment"
+        android:name="com.example.passportdatageneration.fragment.MenuuFragment"
+        android:label="fragment_menuu"
+        tools:layout="@layout/fragment_menuu">
+        <action
+            android:id="@+id/action_menuuFragment_to_listNationFragment"
+            app:destination="@id/listNationFragment" />
+        <action
+            android:id="@+id/action_menuuFragment_to_addNationFragment"
+            app:destination="@id/addNationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNationFragment"
+        android:name="com.example.passportdatageneration.fragment.AddNationFragment"
+        android:label="fragment_add_nation"
+        tools:layout="@layout/fragment_add_nation" />
+    <fragment
+        android:id="@+id/listNationFragment"
+        android:name="com.example.passportdatageneration.fragment.ListNationFragment"
+        android:label="fragment_list_nation"
+        tools:layout="@layout/fragment_list_nation" >
+        <action
+            android:id="@+id/action_listNationFragment_to_nationAllFragment"
+            app:destination="@id/nationAllFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nationAllFragment"
+        android:name="com.example.passportdatageneration.fragment.NationAllFragment"
+        android:label="fragment_nation_all"
+        tools:layout="@layout/fragment_nation_all" />
+</navigation>
